@@ -1,7 +1,7 @@
 //IMPORTS
 const express = require('express')
 const router = express.Router()
-const _vehicles = require('../models/vehicles')
+const _vehicles = require('../models/model.vehicles')
 const _ = require('underscore')
 
 // Create all the vehicles

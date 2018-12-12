@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 
-const vehicles = require('../routes/routes.vehicles.js')
+const vehicles = require('./routes/routes.vehicles.js')
 
 mongoose.connect('mongodb://localhost:27017/vehicles', { useNewUrlParser: true })
 
