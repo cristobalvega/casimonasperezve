@@ -67,6 +67,14 @@ router.get('/filter/doors', (req, res) => {
         })
 })
 
+router.get('/filter/doors/:doors', (req, res) => {
+    _vehicles.find()
+        .then(vehicles => {
+            vehicles ? res.json(vehicles.filter(vehicles => vehicles.doors == req.params.doors)) :
+                res.send("No hay Vehiculos por vender")
+        })
+})
+
 
 // Jugar con los precios para el filter
 /*
