@@ -91,18 +91,18 @@ router.get('/filter/name', (req, res) => {
         })
 })
 
-router.get('/reduce/doors', (req, res) => {
+router.get('/reduce/kilometers_recorded', (req, res) => {
     _vehicles.find()
         .then(vehicles => {
-            vehicles ? res.json({ "vehicles": vehicles.map(vehicles => vehicles.doors).reduce((x, y) => x + y) }) :
+            vehicles ? res.json({ "vehicles": vehicles.map(vehicles => vehicles.kilometers_recorded).reduce((x, y) => x + y) }) :
                 res.send("No hay Vehiculos por vender")
         })
 })
 
-router.get('/reduce/tires', (req, res) => {
+router.get('/reduce/kilometers_sealed', (req, res) => {
     _vehicles.find()
         .then(vehicles => {
-            vehicles ? res.json({ "vehicles": vehicles.map(vehicles => vehicles.tires).reduce((x, y) => x + y) }) :
+            vehicles ? res.json({ "vehicles": vehicles.map(vehicles => vehicles.kilometers_sealed).reduce((x, y) => x + y) }) :
                 res.send("No hay Vehiculos por vender")
         })
 })
